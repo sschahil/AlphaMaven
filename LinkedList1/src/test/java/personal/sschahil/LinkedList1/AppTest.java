@@ -41,10 +41,23 @@ public class AppTest
 	list.add("is", 3);
 	list.add("Joedy", 4);
 	list.print();
-        
+        System.out.println();
+
+	System.out.println("Removing the 2 and 3 position");
 	list.remove(3);
 	list.remove(2);
 	list.print();
-	assertEquals(3, list.getSize());
+	System.out.println();
+	
+	System.out.println("Edit node 1 and node 2");
+	list.editNode("hey", 1);
+	list.editNode("his", 2);
+	list.print();
+	System.out.println();
+
+	list.destroy();
+	list.print();
+	System.out.println();
+	assertEquals(0, list.getSize());
     }
 }

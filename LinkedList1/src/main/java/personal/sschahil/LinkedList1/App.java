@@ -116,6 +116,47 @@ public class App<T> {
 	     return;
 	}//end of switch statement
     }//end of remove method
+
+    public void editNode(T value, int index) {
+	Node<T> current = head;
+	
+	if(index < 1 || index > getSize()) {
+	     System.out.println("Error: Out of Bounds");
+	     return;
+	}
+	if(current.value == null) {
+	     System.out.println("Error: No values to edit");
+	     return;
+	}
+
+	switch(index) {
+	case 1:
+	     current.value = value;
+	     return;
+	default:
+	     if(index == getSize()) {
+		while(current.next != null) {
+		     current= current.next;
+		}
+		current.value = value;
+		return;
+       	     }
+	     int jump = 1;
+	     while(jump < index) {
+		current = current.next;
+		jump++;
+	     }	
+	     current.value = value;
+	     return;
+	}
+    }//end of editNode method
+
+    public void destroy() {
+	System.out.println("Destroying List...");
+    	head.next = null;
+	head.value = null;
+	System.out.println("List is Destroyed");
+    }
 }//end of App class
 
 class Node<T> {
