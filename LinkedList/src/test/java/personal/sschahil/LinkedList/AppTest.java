@@ -33,6 +33,31 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+    	App<String> list = new App<String>();
+
+        System.out.println("Creating the LinkedList...");
+        list.add("hello", 0);
+        list.add("my", 1);
+        list.add("name", 2);
+        list.add("is", 3);
+        list.add("Larry", 4);
+        list.print();
+        System.out.println();
+
+        System.out.println("Removing position 4 from list...");
+        list.remove(4);
+        list.print();
+        System.out.println();
+
+        System.out.println("Editing node 1 and 3...");
+        list.editNode("hey", 1);
+        list.editNode("new", 3);
+        list.print();
+        System.out.println();
+
+        System.out.println("Destroying List...");
+        list.destroy();
+        list.print();
+        System.out.println();
     }
 }
