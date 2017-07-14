@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>personal.sschahil.DoublyLinkedList</groupId>
+  <artifactId>DoublyLinkedList</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170714103242</lastUpdated>
+  </versioning>
+</metadata>
